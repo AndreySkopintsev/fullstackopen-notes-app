@@ -15,7 +15,7 @@ const average = (array) => {
      
 }
 
-module.exports = {
-    palindrome,
-    average
-}
+// module.exports = {
+//     palindrome,
+//     average
+// }

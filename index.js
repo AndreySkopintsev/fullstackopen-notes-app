@@ -1,9 +1,10 @@
 const app = require('./app')
 const http = require('http')
+const config = require('./utils/config')
 
-const port = 3001
+
 const server = http.createServer(app)
 
-server.listen(port,()=>{
-    console.log(`Server running on port ${port}`)
+server.listen(config.PORT,()=>{
+    console.log(`Server running on port ${config.PORT}`)
 })

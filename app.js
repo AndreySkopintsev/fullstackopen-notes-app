@@ -1,3 +1,4 @@
+const config = require('./utils/config')
 const express = require('express')
 const app = express()
 const cors = require('cors')
@@ -6,10 +7,8 @@ const usersRouter = require('./controllers/users')
 const middleware = require('./utils/middleware')
 const mongoose = require('mongoose')
 
-const url =  `mongodb+srv://chen_rules:Chen123.@my-database-vydwb.mongodb.net/note-app?retryWrites=true&w=majority
-`
 
-mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(config.MONGODB_URI,{ useNewUrlParser: true, useUnifiedTopology: true })
 
 app.use(cors())
 app.use(express.static('build'))
